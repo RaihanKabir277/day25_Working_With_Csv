@@ -44,7 +44,7 @@ temperatures = data["temp"]
 
 # ---------convert dataframe to dictionary -----------
 
-data_dictionary = data.to_dict()
+# data_dictionary = data.to_dict()
 # print(data_dictionary)
 
 # ------------convert series to list ------------
@@ -68,6 +68,31 @@ series_list = temperatures.to_list()
 # condition_col = data["condition"]
 # -------another simple way to do this ------
 condition_col = data.condition
-print(condition_col)
+# print(condition_col)
 
+
+
+
+
+# ----------------retrive row and columns values from dataframe -----------------
+# print(data[data.day == "Monday"])
+
+# print(data[data.temp == data.temp.max()])
+
+monday = data[data.day == "Monday"]
+# print(monday.condition) #    #single column retrive
+celcius = monday.temp
+temp_farenheit = ((celcius * 9/5) +32)
+# print(temp_farenheit)
+
+# --------------create a dataframe from scratch---------------
+
+data_dict = {
+    "students": ["Amy", "James", "Angela"],
+    "scores": [76, 56, 65]
+}
+
+data = pandas.DataFrame(data_dict)
+# print(data)
+data.to_csv("new_data.csv")
 
