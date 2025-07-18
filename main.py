@@ -50,8 +50,15 @@ data_dictionary = data.to_dict()
 # ------------convert series to list ------------
 
 series_list = temperatures.to_list()
-print(series_list)
+# print(series_list)
+# sum = 0
+# for value in series_list:
+#     sum += value
 
+# print(f"Average temperature = {sum/len(series_list)}")
 
+# ----------there is a shortcut way to find the average of this below -----------
 
+average_temp = sum(series_list) / len(series_list)
+print(average_temp)
 
