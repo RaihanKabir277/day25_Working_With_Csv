@@ -59,6 +59,15 @@ series_list = temperatures.to_list()
 
 # ----------there is a shortcut way to find the average of this below -----------
 
-average_temp = sum(series_list) / len(series_list)
-print(average_temp)
+# average_te
+
+
+# ------------ there is a pandas more easy way to find this ---------
+# print(f"average temperature = {temperatures.mean()} \nmaximum value = {temperatures.max()}")   #we do not need to convert into a list here
+
+# condition_col = data["condition"]
+# -------another simple way to do this ------
+condition_col = data.condition
+print(condition_col)
+
 
