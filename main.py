@@ -38,5 +38,20 @@ data = pandas.read_csv("weather_data.csv")
 # --------for only temperatures -----
 
 temperatures = data["temp"]
-print(temperatures)
+# print(temperatures)
+# print(type(data))   #total table as called as dataframe
+# print(type(temperatures))  # the column of the table is called series in pandas
+
+# ---------convert dataframe to dictionary -----------
+
+data_dictionary = data.to_dict()
+# print(data_dictionary)
+
+# ------------convert series to list ------------
+
+series_list = temperatures.to_list()
+print(series_list)
+
+
+
 
